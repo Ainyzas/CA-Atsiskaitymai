@@ -29,6 +29,7 @@ function convert(e) {
     ozOutput.textContent = oz + " oz";
 
     output.append(lbOutput, gOutput, ozOutput);
+    input.value = "";
 }
 
 document.querySelector("form").addEventListener("submit", convert);
