@@ -23,8 +23,6 @@ function Calculator() {
 
 const calculator = new Calculator();
 
-console.log(calculator);
-
 console.log(calculator.sum(2, 5));
 console.log(calculator.subtraction(5, 2));
 console.log(calculator.multiplication(2, 10));
