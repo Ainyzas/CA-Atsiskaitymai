@@ -35,11 +35,12 @@
 
 .brand {
     display: inline-block;
-    width: 200px;
+    width: 15rem;
+    height: 30rem;
     margin: 2rem auto;
     box-shadow: 0 2px 4px 0 black;
-    transition: 0.3s;
     border-radius: 10px;
+    overflow: scroll;
 }
 
 .brandName {

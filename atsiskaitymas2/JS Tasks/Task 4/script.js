@@ -7,7 +7,6 @@ nurodomas gamintojas ir jo pagaminti modeliai.
 Pastaba: Sukurta kortelė, kurioje yra informacija apie automobilį (brand), turi 
 būti stilizuota su CSS ir būti responsive;
 -------------------------------------------------------------------------- */
-
 const ENDPOINT = "cars.json";
 
 const output = document.querySelector("#output");
@@ -25,14 +24,15 @@ async function displayBrands() {
         brandCardName.textContent = brand.brand;
         brandCard.append(brandCardName);
 
-        const models = brand.models;
-        models.forEach(model => {
-            const brandCardModel = document.createElement("h4");
+        const brandCardModelList = document.createElement("ul");
+        brand.models.forEach(model => {
+            const brandCardModel = document.createElement("li");
             brandCardModel.classList.add("brandItems");
             brandCardModel.textContent = model;
-            brandCard.append(brandCardModel);
+            brandCardModelList.append(brandCardModel);
         });
 
+        brandCard.append(brandCardModelList);
         output.append(brandCard);
     });
 }
